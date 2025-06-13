@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18.x
+          node-version: 19.1.0
 
       - name: Install dependencies
         run: npm install
@@ -49,5 +49,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.workflow }}
+          github_token: ${{ secrets.THINGS }}
           publish_dir: ./build
